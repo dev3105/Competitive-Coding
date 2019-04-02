@@ -32,9 +32,9 @@ void shift_solution(int &x, int &y, int a, int b, int cnt)
 	y-=cnt*a;
 }
 
-bool find_any_solution(int a, int b, int c, int &x0, int &y0)
+bool find_any_solution(int a, int b, int c, int &x0, int &y0,int &g)
 {
-	int g=xgcd(abs(a), abs(b), x0, y0);
+	g=xgcd(abs(a), abs(b), x0, y0);
 	if(c%g!=0)
 		return false;
 	x0 *= c/g;
